@@ -7,10 +7,8 @@
     <title>Document</title>
     <style>
         * {
-            height: 100%;
-            flex-direction: column  ;
-            justify-content: center;
-            
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
@@ -19,24 +17,30 @@
             display: flex;
             justify-content: center;
             /* Căn giữa theo chiều ngang */
-         
             align-items: center;
             /* Căn giữa theo chiều dọc */
-           
-            /* Đảm bảo full màn hình */
+            height: 100vh;
+            /* Đảm bảo body full màn hình */
+            overflow: hidden;
+            /* Ngăn chặn cuộn */
         }
 
         img {
-            width: 100%;
+            width: auto;
             height: auto;
             max-width: 90vw;
-            /* Giới hạn max chiều rộng để không tràn màn hình */
+            /* Giới hạn chiều rộng tối đa */
+            max-height: 90vh;
+            /* Giới hạn chiều cao tối đa */
+            object-fit: contain;
+            /* Đảm bảo ảnh không bị cắt */
         }
 
         /* Khi màn hình lớn hơn 1024px (PC) */
         @media screen and (min-width: 1024px) {
             img {
                 width: 50%;
+                height: auto;
             }
         }
 
@@ -44,13 +48,14 @@
         @media screen and (max-width: 600px) {
             img {
                 width: 90%;
+                height: auto;
             }
         }
     </style>
 </head>
 
 <body>
-    <img src="./img/avt.png" />
+    <img src="./img/avt.png" alt="Ảnh đại diện" />
 </body>
 
 </html>
