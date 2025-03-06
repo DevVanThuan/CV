@@ -6,15 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            margin: 0 auto;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        body{
+
+        body {
             background-color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            /* Căn giữa theo chiều ngang */
+            align-items: center;
+            /* Căn giữa theo chiều dọc */
+            height: 100vh;
+            /* Đảm bảo full màn hình */
         }
+
         img {
             width: 100%;
             height: auto;
+            max-width: 90vw;
+            /* Giới hạn max chiều rộng để không tràn màn hình */
         }
 
         /* Khi màn hình lớn hơn 1024px (PC) */
@@ -34,9 +47,7 @@
 </head>
 
 <body>
-    <div style="text-align: center;">
-        <img src="./img/avt.png" />
-    </div>
+    <img src="./img/avt.png" />
 </body>
 
 </html>
